@@ -127,7 +127,7 @@ Now you are ready to run the self-assembly MD simulation using the `md.mdp` sett
 ```sh {execute}
 mkdir -p md
 gmx grompp -f mdp_files/md.mdp -c em/em.gro -p topol.top -o md/md.tpr -maxwarn 1
-gmx mdrun -v -deffnm md/md
+gmx mdrun -v -deffnm em/em
 ```
 
 This might take approximately *10* minutes on a single CPU but by default gmx mdrun will use all available CPUs on your machine. The `-v` option shows an estimate of the time to completion. See `gmx mdrun`’s help, `-h`, for instructions on how to tune the numbers of parallel threads used for the simulation. You may want to check the progress of the simulation to see whether the bilayer has already formed before the end of the simulation.
